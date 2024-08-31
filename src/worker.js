@@ -23,7 +23,7 @@ export default {
 		var authDetails = request.headers.get('Authorization');
 
 		if (authDetails && authDetails.split(' ')[0] === 'Bearer' && authDetails.split(' ')[1] === env.API_KEY) {
-			if (request.method === 'POST' && request.headers.get('Content-Type') === 'text/plain') {
+			if (request.method === 'POST' && request.headers.get('Content-Type') === 'text/plain' && (request.headers.get('Accept') === 'application/json' || request.headers.get('Accept') === '*/*') && request.body) {
 				var markdownText = await request.text();
 				var parsed = md.parse(markdownText);
 

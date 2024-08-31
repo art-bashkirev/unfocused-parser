@@ -8,6 +8,12 @@
     "start": "wrangler dev"
   },
   "devDependencies": {
-    "wrangler": "^3.60.3"
+    "@types/luxon": "^3.4.2",
+    "wrangler": "^3.73.0"
+  },
+  "dependencies": {
+    "highlight.js": "^11.10.0",
+    "luxon": "^3.5.0",
+    "markdown-it": "^14.1.0"
   }
 }

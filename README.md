@@ -1,5 +1,24 @@
 # Unfocused Journal Parser
 
+## Table of Contents
+
+1. [Unfocused Journal Parser](#unfocused-journal-parser)
+2. [Features](#features)
+3. [Usage](#usage)
+   - [Install Dependencies](#install-dependencies)
+   - [Run the Parser Locally](#run-the-parser-locally)
+   - [Send a Request](#send-a-request)
+4. [Notes](#notes)
+5. [Deployment](#deployment)
+   - [Create a Cloud Function](#create-a-cloud-function)
+   - [Deploy to Cloud Function](#deploy-to-cloud-function)
+   - [Invoke the Function](#invoke-the-function)
+6. [Example Request Body](#example-request-body)
+7. [Example Response Body](#example-response-body)
+8. [TODO](#todo)
+
+## Unfocused Journal Parser
+
 This project provides a cloud function that parses a markdown journal file and extracts its entries into a structured JSON format.
 
 ## Features

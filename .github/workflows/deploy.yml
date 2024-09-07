@@ -14,7 +14,7 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
         run: echo "API_KEY=\"$API_KEY\"" > .dev.vars
       - name: Start Headless
-        run: npx wrangler dev --port 8787 < /dev/null &
+        run: npx wrangler dev --port 3000 < /dev/null &
       
       - name: Install Postman CLI
         run: |

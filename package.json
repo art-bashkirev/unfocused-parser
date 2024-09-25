@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@types/luxon": "^3.4.2",
-    "wrangler": "^3.78.6"
+    "wrangler": "^3.78.10"
   },
   "dependencies": {
     "luxon": "^3.5.0",

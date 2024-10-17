@@ -1,4 +1,4 @@
-name: Deploy Worker
+name: Test Worker
 on:
   push
   
@@ -25,14 +25,14 @@ jobs:
         run: |
           postman collection run "33304115-bf5ed4f7-1e01-45cf-927a-ed65a4c0e565" -e "33304115-8ac97ab4-ef85-46db-b9b8-bf41e4c2b1b9"
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build & Deploy Worker
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: test
+  #   if: github.ref == 'refs/heads/main'
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Build & Deploy Worker
+  #       uses: cloudflare/wrangler-action@v3
+  #       with:
+  #         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  #         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
